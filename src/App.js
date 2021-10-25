@@ -4,16 +4,16 @@ const App = () => {
 
     const [color, setColor ] = useState('')
   
-    const handleShow = (c) => {
+    const handleShow = (ev) => {
 
       if (c == 'red') {
-        setColor(c)
+        setColor(ev)
       }
        if (c == 'blue') {
-        setColor(c)
+        setColor(ev)
       }
        if ( c == 'yellow') {
-        setColor(c)
+        setColor(ev)
       }
     }
   
