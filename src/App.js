@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
 
-export default App;
+    const [color, setColor ] = useState('')
+  
+    const handleShow = (c) => {
+
+      if (c == 'red') {
+        setColor(c)
+      }
+       if (c == 'blue') {
+        setColor(c)
+      }
+       if ( c == 'yellow') {
+        setColor(c)
+      }
+    }
+  
+    return (
+      <div className="Botones">
+        <h2> Ejercicio 1React</h2>
+        <br/>
+        <button onClick={() => handleShow('red')} >rojo</button>
+        <br />
+        <button onClick={() => handleShow('blue')} >azul</button>
+        <br />
+        <button onClick={() => handleShow('yellow')} >amarillo</button>
+        <br />
+      
+      <div className="color" style={{background: color}}></div>        
+    
+      </div>
+    )
+  }
+  
+  export default App
